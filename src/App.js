@@ -1,25 +1,31 @@
-import logo from './logo.svg';
+import React, {useEffect, useState} from 'react'
+import Splash from './components/splash'
+import Dashboard from './components/dashboard/dashboard'
 import './App.css';
 
 function App() {
+
+  useEffect(() => {
+    setTimeout(() => {
+      setTimePassed();
+    }, 4000);
+  })
+
+  const [loading, setLoading] = useState(true);
+
+  const setTimePassed = () => {
+    setLoading(false)
+  }
+
   return (
+  loading === true ?
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Splash />
     </div>
-  );
+    :
+      <Dashboard />
+  )
+
 }
 
 export default App;

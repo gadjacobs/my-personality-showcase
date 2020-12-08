@@ -1,4 +1,4 @@
-import {NavLink as Link} from 'react-router-dom';
+import { NavLink as Link } from "react-router-dom";
 export default function SideBar() {
   return (
     <aside className="relative bg-sidebar h-screen w-64 hidden sm:block shadow-xl">
@@ -28,7 +28,7 @@ export default function SideBar() {
           to="/"
           exact
         >
-          <i className="fa fa-tachometer mr-3"></i>
+          <i className="fa fa-tasks mr-3"></i>
           Summary
         </Link>
         <Link
@@ -36,7 +36,7 @@ export default function SideBar() {
           activeStyle={{ background: "#1947ee" }}
           to="/personality"
         >
-          <i className="fa fa-sticky-note mr-3"></i>
+          <i className="fa fa-user mr-3"></i>
           Personality Test
         </Link>
         <Link
@@ -44,7 +44,7 @@ export default function SideBar() {
           activeStyle={{ background: "#1947ee" }}
           to="/work"
         >
-          <i className="fa fa-table mr-3"></i>
+          <i className="fa fa-briefcase mr-3"></i>
           Work Values
         </Link>
         <Link
@@ -52,7 +52,7 @@ export default function SideBar() {
           activeStyle={{ background: "#1947ee" }}
           to="/career"
         >
-          <i className="fa fa-align-left mr-3"></i>
+          <i className="fa fa-laptop mr-3"></i>
           Career Aptitude
         </Link>
       </nav>

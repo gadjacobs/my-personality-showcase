@@ -1,9 +1,24 @@
 export default function Footer() {
   return (
-    <footer class="w-full bg-white text-right p-4">
+    <footer className="w-full bg-white text-right p-4">
       Built by{" "}
-      <a target="_blank" href="https://github.com/gadjacobs" rel="noreferrer" class="underline">
+      <a
+        target="_blank"
+        href="https://github.com/gadjacobs"
+        rel="noreferrer"
+        className="underline"
+      >
         Gad Jacobs
+      </a>{" "}
+      with{" "}
+      <a
+        target="_blank"
+        href="https://tailwindcss.com"
+        rel="noreferrer"
+        className="underline"
+      >
+        {" "}
+        TailwindCSS
       </a>
       .
     </footer>

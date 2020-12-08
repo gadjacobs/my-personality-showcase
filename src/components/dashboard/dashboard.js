@@ -12,14 +12,35 @@ export default function Dashboard() {
   return (
     <div className="bg-gray-100 font-family-karla flex">
       <SideBar />
-      <div class="relative w-full flex flex-col h-screen overflow-y-hidden">
+      <div className="relative w-full flex flex-col h-screen overflow-y-hidden">
         <Nav />
-        <div class="w-full h-screen overflow-x-hidden border-t flex flex-col">
+        <div className="w-full h-screen overflow-x-hidden border-t flex flex-col">
           <Switch>
-            <Route path="/" component={Body} exact />
-            <Route path="/personality" component={Personality} />
-            <Route path="/career" component={Career} />
-            <Route path="/work" component={Work} />
+            <Route
+              path="/"
+              render={(props) => (
+                <Body {...props} title={"Gad's Profile Summarry"} />
+              )}
+              exact
+            />
+            <Route
+              path="/personality"
+              render={(props) => (
+                <Personality {...props} title={"Gad's Personality Test"} />
+              )}
+            />
+            <Route
+              path="/career"
+              render={(props) => (
+                <Career {...props} title={"Gad's Career Aptitude"} />
+              )}
+            />
+            <Route
+              path="/work"
+              render={(props) => (
+                <Work {...props} title={"Gad's Work Values"} />
+              )}
+            />
             <Route component={Error} />
           </Switch>
           <Footer />

@@ -30,6 +30,10 @@
 
 .splash-bg {
   height: 100vh;
-  width: 100vw;
   background: rgb(53, 126, 221);
+}
+
+.dash-bg {
+  height: 100vh;
+  background: lightblue;
 }

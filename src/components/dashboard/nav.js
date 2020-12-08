@@ -12,7 +12,6 @@ export default function Nav() {
           <button x-show="isOpen" @click="isOpen = false" class="h-full w-full fixed inset-0 cursor-default"></button>
           <div x-show="isOpen" class="absolute w-32 bg-white rounded-lg shadow-lg py-2 mt-16">
               <a href="#" class="block px-4 py-2 account-link hover:text-white">Account</a>
-              <a href="#" class="block px-4 py-2 account-link hover:text-white">Support</a>
               <a href="#" class="block px-4 py-2 account-link hover:text-white">Sign Out</a>
           </div>
       </div>
@@ -21,7 +20,7 @@ export default function Nav() {
   <!-- Mobile Header & Nav -->
   <header x-data="{ isOpen: false }" class="w-full bg-sidebar py-5 px-6 sm:hidden">
       <div class="flex items-center justify-between">
-          <a href="index.html" class="text-white text-3xl font-semibold uppercase hover:text-gray-300">KnackLab</a>
+          <a href="/" class="text-white text-3xl font-semibold uppercase hover:text-gray-300">KnackLab</a>
           <button @click="isOpen = !isOpen" class="text-white text-3xl focus:outline-none">
               <i x-show="!isOpen" class="fa fa-bars"></i>
               <i x-show="isOpen" class="fa fa-times"></i>
@@ -30,20 +29,20 @@ export default function Nav() {
 
       <!-- Dropdown Nav -->
       <nav :class="isOpen ? 'flex': 'hidden'" class="flex flex-col pt-4">
-          <a href="index.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
-              <i class="fa fa-tachometer mr-3"></i>
+          <a href="/" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
+              <i class="fa fa-tasks mr-3"></i>
               Summary
           </a>
-          <a href="blank.html" class="flex items-center active-nav-link text-white py-2 pl-4 nav-item">
-              <i class="fa fa-sticky-note mr-3"></i>
+          <a href="/personality" class="flex items-center active-nav-link text-white py-2 pl-4 nav-item">
+              <i class="fa fa-user mr-3"></i>
               Personality test
           </a>
-          <a href="tables.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
-              <i class="fa fa-table mr-3"></i>
+          <a href="/work" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
+              <i class="fa fa-briefcase mr-3"></i>
               Work Values
           </a>
-          <a href="forms.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
-              <i class="fa fa-align-left mr-3"></i>
+          <a href="/career" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
+              <i class="fa fa-laptop mr-3"></i>
               Career Aptitude
           </a>
 

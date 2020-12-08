@@ -1,7 +1,7 @@
 export default function PersonalityTrait({trait, percentage, name, color}) {
     return (
 
-          <div class={`border-2 border-${color}-200 px-4 py-6 rounded-lg`}>
+          <div className={`border-2 border-${color}-200 px-4 py-6 rounded-lg`}>
             <div className="relative pt-1">
               <div className="flex mb-2 items-center justify-between">
                 <div>

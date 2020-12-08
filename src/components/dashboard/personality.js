@@ -1,48 +1,38 @@
-import PersonalityTrait from "./personalityTrait";
+import React, { useEffect, useState } from "react";
+import Splash from "../splash";
 
-export default function Personality() {
-  const traits = [
-    {
-      trait: "Mind",
-      name: "Introverted",
-      color: "pink",
-      percentage: "71%",
-    },
-    {
-      trait: "Energy",
-      name: "Intuitive",
-      color: "green",
-      percentage: "64%",
-    },
-    {
-      trait: "Nature",
-      name: "Thinking",
-      color: "gray",
-      percentage: "51%",
-    },
-    {
-      trait: "Tactics",
-      name: "Prospecting",
-      color: "yellow",
-      percentage: "60%",
-    },
-    {
-      trait: "Identity",
-      name: "Turbulent",
-      color: "blue",
-      percentage: "53%",
-    },
-  ];
-  return traits.map((trait, i) => {
-    return (
-      <div class="p-4 lg:w-1/5 sm:w-1/2 w-full">
-        <PersonalityTrait
-          trait={trait.trait}
-          name={trait.name}
-          color={trait.color}
-          percentage={trait.percentage}
-        />
-      </div>
-    );
+import PersonalitySummary from "./personalitySummary";
+export default function Personality({ title }) {useEffect(() => {
+    setTimeout(() => {
+      setTimePassed();
+    }, 3000);
   });
+
+  const [loading, setLoading] = useState(true);
+
+  const setTimePassed = () => {
+    setLoading(false);
+  };
+  return loading === true ? (
+    <div className="App">
+      <Splash
+        bg={"dash-bg animate-pulse"}
+        text="Please hold, we're building the results ⏳"
+      />
+    </div>
+  ) : (
+    <main className="w-full flex-grow p-6">
+      <h1 className="text-3xl text-black pb-6">{title}</h1>
+      <div className="p-6 bg-white">
+        <div id="chartOne" width="400" height="200">
+          <h2 className="text-2xl text-center text-black pb-6">
+            Gad is a Turbulent Logician (INTP-T)
+          </h2>
+          <div className="flex flex-wrap -m-4 text-center">
+            <PersonalitySummary />
+          </div>
+        </div>
+      </div>
+    </main>
+  );
 }

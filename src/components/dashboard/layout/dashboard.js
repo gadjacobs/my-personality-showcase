@@ -26,7 +26,7 @@ export default function Dashboard() {
             <Route
               path="/personality"
               render={(props) => (
-                <Personality {...props} title={"Gad's Personality Test"} />
+                <Personality {...props} title={"Gad's Personality Traits"} />
               )}
             />
             <Route

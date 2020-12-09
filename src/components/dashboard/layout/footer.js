@@ -20,6 +20,16 @@ export default function Footer() {
         {" "}
         TailwindCSS
       </a>
+      {" "}and{" "}
+      <a
+        target="_blank"
+        href="https://reactjs.org/"
+        rel="noreferrer"
+        className="underline"
+      >
+
+        ReactJS
+      </a>
       .
     </footer>
   );

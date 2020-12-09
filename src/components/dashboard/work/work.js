@@ -3,25 +3,25 @@ import Splash from "../../splashscreen/splash";
 import WorkSummary from "./workSummary";
 
 export default function Work({ title }) {
-    useEffect(() => {
-        setTimeout(() => {
-          setTimePassed();
-        }, 1500);
-      });
+  useEffect(() => {
+    setTimeout(() => {
+      setTimePassed();
+    }, 1500);
+  });
 
-      const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
-      const setTimePassed = () => {
-        setLoading(false);
-      };
-      return loading === true ? (
-        <div className="App">
-          <Splash
-            bg={"dash-bg animate-pulse"}
-            text="Please hold, we're building the results ⏳"
-          />
-        </div>
-      ) : (
+  const setTimePassed = () => {
+    setLoading(false);
+  };
+  return loading === true ? (
+    <div className="App">
+      <Splash
+        bg={"dash-bg animate-pulse"}
+        text="Please hold, we're building the results ⏳"
+      />
+    </div>
+  ) : (
     <main className="w-full flex-grow p-6">
       <h1 className="text-3xl text-black pb-6">{title}</h1>
       <div className="p-6 bg-white">
@@ -35,17 +35,80 @@ export default function Work({ title }) {
         </div>
       </div>
       <div className="mt-4 pt-6 bg-white">
+      <h2 className="underline text-2xl text-center text-black pb-6">
+            This is the grading system for Gad's value profile compared to the working population of Western Europe:
+          </h2>
+      <div className="mx-auto flex flex-grow" >
+      <img
+                alt="ecommerce"
+                class="lg:w-2/3 w-full p-6 lg:h-auto h-32 object-cover object-center"
+                src="https://i.imgur.com/mkvfR5V.png"
+              />
+        <div className="lg:w-1/3 w-full" id="chartOne" width="400" height="200">
+
+          <p className="text-xl font-bold text-center text-black pb-6">
+            1:{" "}
+            <span className="text-lg font-thin text-center text-black pb-6">
+              Extremely low
+            </span>
+          </p>
+          <p className="text-xl font-bold text-center text-black pb-6">
+            2:{" "}
+            <span className="text-lg font-thin text-center text-black pb-6">
+              Low
+            </span>
+          </p>
+          <p className="text-xl font-bold text-center text-black pb-6">
+            3:{" "}
+            <span className="text-lg font-thin text-center text-black pb-6">
+              Below average
+            </span>
+          </p>
+          <p className="text-xl font-bold text-center text-black pb-6">
+            4:{" "}
+            <span className="text-lg font-thin text-center text-black pb-6">
+              Just below average{" "}
+            </span>
+          </p>
+          <p className="text-xl font-bold text-center text-black pb-6">
+            5:{" "}
+            <span className="text-lg font-thin text-center text-black pb-6">
+              Average{" "}
+            </span>
+          </p>
+          <p className="text-xl font-bold text-center text-black pb-6">
+            6:{" "}
+            <span className="text-lg font-thin text-center text-black pb-6">
+              Just above average{" "}
+            </span>
+          </p>
+          <p className="text-xl font-bold text-center text-black pb-6">
+            7:{" "}
+            <span className="text-lg font-thin text-center text-black pb-6">
+              Above average{" "}
+            </span>
+          </p>
+          <p className="text-xl font-bold text-center text-black pb-6">
+            8:{" "}
+            <span className="text-lg font-thin text-center text-black pb-6">
+              High{" "}
+            </span>
+          </p>
+          <p className="text-xl font-bold text-center text-black pb-6">
+            9:{" "}
+            <span className="text-lg font-thin text-center text-black pb-6">
+              Extremely high{" "}
+            </span>
+          </p>
+        </div>
+        </div>
+      </div>
+      <div className="mt-4 pt-6 bg-white">
         <div id="chartOne" width="400" height="200">
           <h2 className="text-xl text-center text-black pb-6">
-          If you have work in which the work values that you believe are important have ample room, the chance that you will be successful and happy in your work will increase. <br />
-            <a
-              target="_blank"
-              href="https://www.123test.com/report/3XKNWPRYBOX4ODKZTH/"
-              rel="noreferrer"
-              className="underline text-xl text-center text-black pb-6"
-            >
-              View Report
-            </a>
+            If you have work in which the work-values that you believe are
+            important, have ample room, the chances that you will be successful
+            and happy in your work will increase.
           </h2>
         </div>
       </div>
@@ -63,7 +126,7 @@ export default function Work({ title }) {
             >
               View full report
             </a>
-          </div>
+        </div>
         </div>
       </section>
     </main>
